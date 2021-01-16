@@ -31,9 +31,19 @@ conocidas como rockyou.txt,dogs.txt,etc es :
 
 [wordlistcl](https://github.com/BlackArch/wordlistctl)
 
-Si deseas saber mas sobre la
+o podemos buscarlas manualmente por google.
 
 ## Herramientas de craqueo
+
+### Hashcat 
+  Es una herramienta bastante por la wiki que tiene todo 
+  tipo de hashes.Un ejemplo de esto seria :
+
+![hashcatt](images/hashcatvar.jpg)
+
+
+
+### John The Ripper
 
 
 
