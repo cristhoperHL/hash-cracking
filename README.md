@@ -36,12 +36,14 @@ o podemos buscarlas manualmente por google.
 ## Herramientas de craqueo
 
 ### Hashcat 
-  Es una herramienta bastante por la wiki que tiene todo 
+  Es una herramienta bastante usada por la wiki que tiene todo 
   tipo de hashes.Un ejemplo de esto seria :
 
 ![hashcatt](images/hashcatvar.jpg)
 
-
+```
+hashcat -m 1800 hash.txt wordlist.txt
+```
 
 ### John The Ripper
 
