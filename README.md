@@ -8,7 +8,10 @@
 ## Identificado el tipo de hash
   Para poder identificar el tipo de hash 
   podemos utilizar herramientas tales como 
-  hash-identifier o hashid,
+  hash-identifier :
  
 ![hashidentifier](images/hashident.jpg)
   
+  Hashid :
+
+![hashid](images/hashid.jpg)
