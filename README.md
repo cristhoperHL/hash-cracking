@@ -15,3 +15,9 @@
   Hashid :
 
 ![hashid](images/hashid.jpg)
+
+  Aunque si tiene caracteres especiales es mejor 
+  identificarlos por la lista de hashes que tiene 
+  hashcat en su documentacion :
+
+![hashcat](images/hashcatvar.jpg)
