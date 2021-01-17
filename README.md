@@ -67,16 +67,48 @@ y atacamos el hash de esta manera.
 john hash.txt --wordlist=wordlist.txt --format=md5crypt
 ```
 
+## Generacion de listas de palabras personalizadas.
+
+Hay muchas herramientas para generar lista de palabras claro que tambien 
+se puede ser de manera manual haciendo un algoritmo pero para evitar 
+inventar la rueda de nuevo existen herramientas como :
 
 
+### Cewl
+Esta es una herramienta que nos permite generar una lista de palabras 
+con los strings de un sitio web(hace un spidering al sitio web y obtiene
+todos sus palabras).
+
+[Cewl](https://github.com/digininja/CeWL)
+
+Un ejemplo de como funciona seria este, en donde genera un archivo example.txt
+con las palabras de este sitio web.
+```
+ruby -W0 ./cewl.rb -d 3 -w $(pwd)/example.txt https://example.org
+```
+
+### TTPassGen
+
+Es una herramienta para crear wordlist a partir de expresiones regulares.
+
+[TTPassGen](https://github.com/tp7309/TTPassGen)
+
+Ejemplos :
+
+```
+python3 ttpassgen.py --rule '[?d]{4:4:*}' pin.txt
+```
+
+```
+python3 ttpassgen.py --rule '[?l]{1:3:*}' abc.txt
+```
+
+Ahora en caso que queramos combinar wordlists podriamos usar esta sintaxis :
 
 
-
-
-
-
-
-
+```
+python3 ttpassgen.py --dictlist 'pin.txt,abc.txt' --rule '$0[-]{1}$1' combination.txt
+```
 
 
 
