@@ -1,33 +1,39 @@
-# hash-cracking
+---
+layout: default
+title: "Hash cracking"
+permalink: /articles/hash-cracking
+---
 
-  La base consiste en aplicar fuerza bruta con una lista 
-  de posibles contraseñas convirtiendo cada una de las 
-  contraseñas de la lista en un hash y comparandolo con el 
-  hash que tenemos.
+# hash-cracking 
+
+## ¿Que es una funcion hash?
+
+Las funciones hash son diferentes al cifrado.No hay clave, y esta destinado a ser imposible(o muy, muy dificil) volver de la salida a la entrada.
+
+Una funcion hash toma algunos datos de entrada de cualquier tamaño y crea un resumen de esos datos.La salida es de un tamaño fijo.Es dificil predecir cual sera el resultado de cualquier entrada y viceversa. Los buenos algoritmos de hash seran faciles de calcular y lentos para revertir, ademas cualquier cambio en la entrada deberia causar un gran cambio en la salida.
+
+Ahora la razon por la que esto deberia importarnos es porque el hash es usado frecuentemente en la ciberseguridad para verificar que su contraseña sea correcta o verificar la integridad de los datos en general.
+
+
+
+La base consiste en aplicar fuerza bruta con una lista de posibles contraseñas convirtiendo cada una de las contraseñas de la lista en un hash y comparandolo con el hash que tenemos.
 
 ## Identificando el tipo de hash
-  Para poder identificar el tipo de hash 
-  podemos utilizar herramientas tales como 
-  hash-identifier :
- 
-![hashidentifier](images/hashident.jpg)
-  
+Para poder identificar el tipo de hash podemos utilizar herramientas tales como hash-identifier :
+
+![hashidentifier](../img/hashident.jpg)
+
   Hashid :
 
-![hashid](images/hashid.jpg)
+![hashid](../img/hashid.jpg)
 
-  Aunque si tiene caracteres especiales es mejor 
-  identificarlos por la lista de hashes que tiene 
-  hashcat en su documentacion :
+Aunque si tiene caracteres especiales es mejor identificarlos por la lista de hashes que tiene hashcat en su documentacion :
 
-![hashcat](images/hashcatvar.jpg)
+![hashcat](../img/hashcatvar.jpg)
 
 ## Wordlists 
 
-Una vez tenemos el tipo de hash debemos definir que lista
-de palabras usaremos contra el hash objetivo.
-Una herramienta muy util para buscar y descargar wordlists
-conocidas como rockyou.txt,dogs.txt,etc es : 
+Una vez tenemos el tipo de hash debemos definir que lista de palabras usaremos contra el hash objetivo.Una herramienta muy util para buscar y descargar wordlists conocidas como rockyou.txt,dogs.txt,etc es : 
 
 [wordlistcl](https://github.com/BlackArch/wordlistctl)
 
@@ -39,7 +45,7 @@ o podemos buscarlas manualmente por google.
   Es una herramienta bastante usada por la wiki que tiene todo 
   tipo de hashes.Un ejemplo de esto seria :
 
-![hashcatt](images/hashcatvar.jpg)
+![hashcatt](../img/hashcatvar.jpg)
 
 Una vez tenemos el modo de hash de la wiki podemos usar ese dato para atacar el
 hash de esta manera :
@@ -83,6 +89,7 @@ todos sus palabras).
 
 Un ejemplo de como funciona seria este, en donde genera un archivo example.txt
 con las palabras de este sitio web.
+
 ```
 ruby -W0 ./cewl.rb -d 3 -w $(pwd)/example.txt https://example.org
 ```
