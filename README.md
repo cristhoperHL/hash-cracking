@@ -16,15 +16,15 @@ La base consiste en aplicar fuerza bruta con una lista de posibles contraseñas 
 ## Identificando el tipo de hash
 Para poder identificar el tipo de hash podemos utilizar herramientas tales como hash-identifier :
 
-![hashidentifier](../images/hashident.jpg)
+![hashidentifier](images/hashident.jpg)
 
   Hashid :
 
-![hashid](../images/hashid.jpg)
+![hashid](images/hashid.jpg)
 
 Aunque si tiene caracteres especiales es mejor identificarlos por la lista de hashes que tiene hashcat en su documentacion :
 
-![hashcat](../images/hashcatvar.jpg)
+![hashcat](images/hashcatvar.jpg)
 
 ## Wordlists 
 
@@ -40,7 +40,7 @@ o podemos buscarlas manualmente por google.
   Es una herramienta bastante usada por la wiki que tiene todo 
   tipo de hashes.Un ejemplo de esto seria :
 
-![hashcatt](../images/hashcatvar.jpg)
+![hashcatt](images/hashcatvar.jpg)
 
 Una vez tenemos el modo de hash de la wiki podemos usar ese dato para atacar el
 hash de esta manera :
